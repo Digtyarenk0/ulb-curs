@@ -3,13 +3,14 @@ import { Link, Route, Routes } from "react-router-dom";
 import { AboutPageAsync } from "./pages/about/about.async";
 import { MainPageAsync } from "./pages/main/main.async";
 import "./styles/index.scss";
+import cs from "classnames";
 import { useTheme } from "./theme/useTheme";
 
 export const App = () => {
   const { theme, toggleTheme } = useTheme();
 
   return (
-    <div className={`app ${theme}`}>
+    <div className={cs("app", theme)}>
       <button onClick={toggleTheme}>TOGGLE</button>
       <Link to={"/"}>Главная</Link>
       <Link to={"/about"}>О сайте</Link>
