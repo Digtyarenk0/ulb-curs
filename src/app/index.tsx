@@ -4,9 +4,10 @@ import { AboutPageAsync } from "../pages/about/index.async";
 import { MainPageAsync } from "../pages/main/index.async";
 import "./styles/index.scss";
 import cs from "classnames";
-import { useTheme } from "./providers/theme/useTheme";
+import { useTheme } from "app/providers/theme";
 import { Navbar } from "widgets/navbar";
 import { AppRouter } from "app/providers/router";
+import { ThemeSwitcher } from "widgets/theme-switcher";
 
 export const App = () => {
   const { theme, toggleTheme } = useTheme();
@@ -15,7 +16,6 @@ export const App = () => {
     <div className={cs("app", theme)}>
       <Navbar />
       <AppRouter />
-      <button onClick={toggleTheme}>TOGGLE</button>
     </div>
   );
 };

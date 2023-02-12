@@ -1,11 +1,18 @@
 import React from "react";
 import cls from "./navbar.module.scss";
-import { AppLink, AppLinkTheme } from "shared/ui/AppLink/app-link";
+import { AppLink, AppLinkTheme } from "shared/ui/app-link/app-link";
 import { RoutePath } from "shared/config/route-config";
+import { ThemeSwitcher } from "widgets/theme-switcher";
+import classNames from "classnames";
 
-export const Navbar = () => {
+interface NavbarProps {
+  className?: string;
+}
+
+export const Navbar = ({ className }: NavbarProps) => {
   return (
-    <div className={cls.navbar}>
+    <div className={classNames(cls.navbar)}>
+      <ThemeSwitcher />
       <div className={cls.links}>
         <AppLink
           theme={AppLinkTheme.SECONDARY}
