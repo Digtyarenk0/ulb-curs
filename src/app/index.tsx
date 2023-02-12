@@ -5,21 +5,17 @@ import { MainPageAsync } from "../pages/main/index.async";
 import "./styles/index.scss";
 import cs from "classnames";
 import { useTheme } from "./providers/theme/useTheme";
+import { Navbar } from "widgets/navbar";
+import { AppRouter } from "app/providers/router";
 
 export const App = () => {
   const { theme, toggleTheme } = useTheme();
 
   return (
     <div className={cs("app", theme)}>
+      <Navbar />
+      <AppRouter />
       <button onClick={toggleTheme}>TOGGLE</button>
-      <Link to={"/"}>Главная</Link>
-      <Link to={"/about"}>О сайте</Link>
-      <Suspense fallback={<div>Loading...</div>}>
-        <Routes>
-          <Route path={"/about"} element={<AboutPageAsync />} />
-          <Route path={"/"} element={<MainPageAsync />} />
-        </Routes>
-      </Suspense>
     </div>
   );
 };
