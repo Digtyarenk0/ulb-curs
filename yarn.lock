@@ -6088,7 +6088,7 @@ react-is@^17.0.1:
 
 react-lazily@^0.9.1:
   version "0.9.1"
-  resolved "https://registry.npmjs.org/react-lazily/-/react-lazily-0.9.1.tgz"
+  resolved "https://registry.yarnpkg.com/react-lazily/-/react-lazily-0.9.1.tgz#cbca14ded4b3f0aa250521ceb2c0f9b858eece29"
   integrity sha512-1Xg6OkiAczQIOTqntX61Igjdr5LyYnPiDLbWZxoauTziQPzsdd+U0OXltEvPKn7yq4OaowO+MV3NFIP/53ZR5A==
 
 react-refresh@0.12.0:
