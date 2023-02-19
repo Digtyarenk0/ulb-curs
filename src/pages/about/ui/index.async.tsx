@@ -1,3 +1,3 @@
-import { lazily } from "react-lazily";
+import { lazily } from 'react-lazily';
 
-export const AboutPageAsync = lazily(() => import(".")).AboutPage;
+export const AboutPageAsync = lazily(() => import('.')).AboutPage;
