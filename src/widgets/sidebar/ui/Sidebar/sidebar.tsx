@@ -2,8 +2,8 @@ import classNames from 'classnames';
 import React, { useState } from 'react';
 import { ThemeSwitcher } from 'widgets/theme-switcher';
 import { LangSwitcher } from 'widgets/lang-switcher/lang-switcher';
-import cls from './Sidebar.module.scss';
 import { useTranslation } from 'react-i18next';
+import cls from './Sidebar.module.scss';
 
 interface SidebarProps {
   className?: string;
