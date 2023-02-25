@@ -7,5 +7,5 @@ interface Props {
   };
 
 export const  ErrorBoundarySuspense: React.FC<Props> = ({ children }) => (
-        <ErrorBoundary FallbackComponent={ErrorPage}>{children}</ErrorBoundary> 
+        <ErrorBoundary FallbackComponent={ErrorPage}>{children}</ErrorBoundary>
     )
