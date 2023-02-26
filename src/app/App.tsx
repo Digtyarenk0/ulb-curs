@@ -3,8 +3,8 @@ import './styles/index.scss';
 import classNames from 'classnames';
 import { useTheme } from 'app/providers/ThemeProvider';
 import { AppRouter } from 'app/providers/router';
-import { Navbar } from 'widgets/Navbar1';
-import { Sidebar } from 'widgets/Sidebar1';
+import { Navbar } from 'widgets/Navbar';
+import { Sidebar } from 'widgets/Sidebar';
 
 function App() {
     const { theme } = useTheme();
