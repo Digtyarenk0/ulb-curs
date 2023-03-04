@@ -15,7 +15,7 @@
     "test:ui": "yarn loki test",
     "test:ui:ok": "yarn loki approve",
     "test:ui:ci": "yarn loki --requireReference --reactUri file:./storybook-static",
-    "test:ui:report": "npm run test:ui:json && npm run test:ui:html",
+    "test:ui:report": "yarn test:ui:json && yarn test:ui:html",
     "test:ui:json": "node scripts/generate-visual-json-report.js",
     "test:ui:html": "reg-cli --from .loki/report.json --report .loki/report.html",
     "storybook": "start-storybook -p 6006 -c ./config/storybook",
