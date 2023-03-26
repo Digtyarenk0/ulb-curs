@@ -31,6 +31,8 @@ module.exports = {
     'i18next/no-literal-string': ['error', { markupOnly: true,
       ignoreAttribute: ['data-testid', 'to'],
     }],
+    'jsx-a11y/no-static-element-interactions': 'off',
+    'jsx-a11y/click-events-have-key-events': 'off',
   },
   globals: {
     __IS_DEV__: true,
