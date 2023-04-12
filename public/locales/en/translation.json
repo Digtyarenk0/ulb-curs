@@ -16,5 +16,8 @@
   "Enter password": "Enter password",
   "Enter username": "Enter username",
   "Auth form": "Auth form",
-  "Profile": "Profile"
+  "Profile": "Profile",
+  "Edit": "Edit",
+  "Name": "Name",
+  "Surname": "Surname"
 }

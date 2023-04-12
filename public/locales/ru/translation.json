@@ -17,5 +17,8 @@
   "Enter password": "Введите пароль",
   "Enter username": "Введите username",
   "Auth form": "Форма авторизации",
-  "Profile": "Профиль"
+  "Profile": "Профиль",
+  "Edit": "Редактировать",
+  "Name": "Имя",
+  "Surname": "Фамилия"
 }
