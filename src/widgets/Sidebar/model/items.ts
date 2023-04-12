@@ -11,19 +11,19 @@ export interface SidebarItemType {
 }
 
 export const SidebarItemsList: SidebarItemType[] = [
-  {
-    path: RoutePath.main,
-    Icon: MainIcon,
-    text: 'Main',
-  },
-  {
-    path: RoutePath.about,
-    Icon: AboutIcon,
-    text: 'About',
-  },
-  {
-    path: RoutePath.profile,
-    Icon: ProfileIcon,
-    text: 'Profile',
-  },
+    {
+        path: RoutePath.main,
+        Icon: MainIcon,
+        text: 'Main',
+    },
+    {
+        path: RoutePath.about,
+        Icon: AboutIcon,
+        text: 'About',
+    },
+    {
+        path: RoutePath.profile,
+        Icon: ProfileIcon,
+        text: 'Profile',
+    },
 ];

@@ -45,36 +45,36 @@ export const LoginForm = memo(({ className }: LoginFormProps) => {
 
     return (
         <DynamicModuleLoader
-        removeAfterUnmount
-        reducers={initialReducers}
+            removeAfterUnmount
+            reducers={initialReducers}
         >
-        <div className={classNames(cls.LoginForm, {}, [className])}>
-            <Text title={t('Auth form')} />
-            {error && <Text text={t('Вы ввели неверный логин или пароль')} theme="error" />}
-            <Input
-                autofocus
-                type="text"
-                className={cls.input}
-                placeholder={t('Enter username')}
-                onChange={onChangeUsername}
-                value={username}
-            />
-            <Input
-                type="text"
-                className={cls.input}
-                placeholder={t('Enter password')}
-                onChange={onChangePassword}
-                value={password}
-            />
-            <Button
-                theme={ButtonTheme.OUTLINE}
-                className={cls.loginBtn}
-                onClick={onLoginClick}
-                disabled={isLoading}
-            >
-                {t('Entry')}
-            </Button>
-        </div>
+            <div className={classNames(cls.LoginForm, {}, [className])}>
+                <Text title={t('Auth form')} />
+                {error && <Text text={t('Вы ввели неверный логин или пароль')} theme="error" />}
+                <Input
+                    autofocus
+                    type="text"
+                    className={cls.input}
+                    placeholder={t('Enter username')}
+                    onChange={onChangeUsername}
+                    value={username}
+                />
+                <Input
+                    type="text"
+                    className={cls.input}
+                    placeholder={t('Enter password')}
+                    onChange={onChangePassword}
+                    value={password}
+                />
+                <Button
+                    theme={ButtonTheme.OUTLINE}
+                    className={cls.loginBtn}
+                    onClick={onLoginClick}
+                    disabled={isLoading}
+                >
+                    {t('Entry')}
+                </Button>
+            </div>
         </DynamicModuleLoader>
     );
 });
