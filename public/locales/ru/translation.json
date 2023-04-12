@@ -11,5 +11,10 @@
   "Language": "Язык",
   "Unknow error": "Произошла непредвиденная ошибка",
   "Update page": "Обновить страницу",
-  "Main": "Главная"
+  "Main": "Главная",
+  "Entry": "Вход",
+  "Exit": "Выход",
+  "Enter password": "Введите пароль",
+  "Enter username": "Введите username",
+  "Auth form": "Форма авторизации"
 }

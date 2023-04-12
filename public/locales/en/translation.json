@@ -10,5 +10,10 @@
   "Language": "Language",
   "Unknow error": "An unexpected error has occurred",
   "Update page": "Refresh page",
-  "Main": "Main"
+  "Main": "Main",
+  "Entry": "Entry",
+  "Exit": "Exit",
+  "Enter password": "Enter password",
+  "Enter username": "Enter username",
+  "Auth form": "Auth form"
 }
