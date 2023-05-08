@@ -3,7 +3,7 @@ import { Button, ButtonTheme } from 'shared/ui/Button/Button';
 import { Input } from 'shared/ui/Input/Input';
 import { useDispatch, useSelector } from 'react-redux';
 import { memo, useCallback } from 'react';
-import { Text } from 'shared/ui/Text/Text';
+import { Text, TextTheme } from 'shared/ui/Text/Text';
 import classNames from 'classnames';
 import { DynamicModuleLoader, ReducersList } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 import { getLoginPassword } from '../../model/selectors/selectors/getLoginPassword/getLoginPassword';
@@ -50,7 +50,7 @@ export const LoginForm = memo(({ className }: LoginFormProps) => {
         >
             <div className={classNames(cls.LoginForm, {}, [className])}>
                 <Text title={t('Auth form')} />
-                {error && <Text text={t('Вы ввели неверный логин или пароль')} theme="error" />}
+                {error && <Text text={t('Вы ввели неверный логин или пароль')} theme={TextTheme.ERROR} />}
                 <Input
                     autofocus
                     type="text"

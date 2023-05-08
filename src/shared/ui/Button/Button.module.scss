@@ -25,6 +25,12 @@
     background: none;
 }
 
+.outline_red {
+    border: 1px solid var(--red-light);
+    color: var(--red-light);
+    background: none;
+}
+
 .background {
     background: var(--bg-color);
     color: var(--primary-color);
@@ -66,4 +72,8 @@
 
 .size_xl {
     font: var(--font-xl);
+}
+
+.disabled {
+    opacity: 0.5;
 }
