@@ -8,6 +8,7 @@ import { CurrencySelect } from 'entities/Currency';
 import { Country } from 'entities/Country/model/types/country';
 import { CountrySelect } from 'entities/Country';
 import classNames from 'classnames';
+import { useCallback, KeyboardEvent  } from 'react';
 import cls from './ProfileCard.module.scss';
 import { Profile } from '../../model/types/profile';
 
@@ -44,6 +45,12 @@ export const ProfileCard = (props: ProfileCardProps) => {
         onChangeCurrency,
     } = props;
     const { t } = useTranslation('profile');
+
+    const ageOnKeyDown = useCallback((e: KeyboardEvent<HTMLInputElement>) => {
+        if (!/[0-9]/.test(e.key)) {
+            e.preventDefault();
+            }
+    }, [])
 
     if (isLoading) {
         return (
@@ -96,6 +103,7 @@ export const ProfileCard = (props: ProfileCardProps) => {
                     value={data?.age}
                     placeholder={t('Ваш возраст')}
                     className={cls.input}
+                    onKeyDown={ageOnKeyDown}
                     onChange={onChangeAge}
                     readonly={readonly}
                 />
