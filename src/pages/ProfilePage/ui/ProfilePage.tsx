@@ -36,9 +36,9 @@ const ProfilePage = ({ className }: ProfilePageProps) => {
     const isLoading = useSelector(getProfileIsLoading);
     const error = useSelector(getProfileError);
     const readonly = useSelector(getProfileReadonly);
-    const validateErrors = useSelector(getProfileValidateError);
+    const validateError = useSelector(getProfileValidateError);
 
-    const validateErrorsTranslate = {
+    const validateErrorTranslate = {
         [ValidateProfileError.INCORRECT_AGE]: t('Некорректный возраст'),
         [ValidateProfileError.INCORRECT_COUNTRY]: t('Некорректная страна'),
         [ValidateProfileError.INCORRECT_USER_DATA]: t('Некорректные данные юзера'),
@@ -47,7 +47,9 @@ const ProfilePage = ({ className }: ProfilePageProps) => {
     }
 
     useEffect(() => {
-        dispatch(fetchProfileData());
+        if (__PROJECT__ !== 'storybook') {
+            dispatch(fetchProfileData());
+        }
     }, [dispatch]);
 
     const onChangeFirstname = useCallback((value?: string) => {
@@ -86,8 +88,8 @@ const ProfilePage = ({ className }: ProfilePageProps) => {
         <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
             <div className={classNames('', {}, [className])}>
                 <ProfilePageHeader />
-                {validateErrors?.length && validateErrors.map(err => 
-                    (<Text key={err} theme={TextTheme.ERROR}  text={validateErrorsTranslate[err]}/>))}
+                {validateError?.length && validateError.map(err => 
+                    (<Text key={err} theme={TextTheme.ERROR}  text={validateErrorTranslate[err]}/>))}
                 <ProfileCard
                     data={formData}
                     isLoading={isLoading}
