@@ -1,11 +1,12 @@
 import { Text } from 'shared/ui/Text/Text';
 import { Button, ButtonTheme } from 'shared/ui/Button/Button';
 import { useTranslation } from 'react-i18next';
-import { useDispatch, useSelector } from 'react-redux';
-import { getProfileReadonly, profileActions, updateProfileData } from 'entities/Profile';
+import { useSelector } from 'react-redux';
+import { getProfileData, getProfileReadonly, profileActions, updateProfileData } from 'entities/Profile';
 import { useCallback } from 'react';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
 import classNames from 'classnames';
+import { getUserAuthData } from 'entities/User';
 import cls from './ProfilePageHeader.module.scss';
 
 interface ProfilePageHeaderProps {
@@ -19,6 +20,9 @@ export const ProfilePageHeader = (props: ProfilePageHeaderProps) => {
 
     const { t } = useTranslation('profile');
 
+    const user = useSelector(getUserAuthData);
+    const profile = useSelector(getProfileData);
+    const canEdit = user?.id === profile?.id
     const readonly = useSelector(getProfileReadonly);
     const dispatch = useAppDispatch();
 
@@ -37,7 +41,8 @@ export const ProfilePageHeader = (props: ProfilePageHeaderProps) => {
     return (
         <div className={classNames(cls.ProfilePageHeader, {}, [className])}>
             <Text title={t('Профиль')} />
-            {readonly
+            {canEdit && (<div  className={cls.btnsWrapper}>
+                {readonly
                 ? (
                     <Button
                         className={cls.editBtn}
@@ -65,6 +70,8 @@ export const ProfilePageHeader = (props: ProfilePageHeaderProps) => {
                         </Button>
                     </>
                 )}
+            </div>)}
+      
         </div>
     );
 };
