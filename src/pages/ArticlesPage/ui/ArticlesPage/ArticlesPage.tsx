@@ -11,7 +11,7 @@ import { useSearchParams } from 'react-router-dom';
 import classNames from 'classnames';
 import { fetchNextArticlesPage } from '../../model/services/fetchNextArticlesPage/fetchNextArticlesPage';
 import { initArticlesPage } from '../../model/services/initArticlesPage/initArticlesPage';
-import { articlesPageReducer, getArticles } from '../../model/slices/articlesPageSlice';
+import { articlesPageActions, articlesPageReducer, getArticles } from '../../model/slices/articlesPageSlice';
 import cls from './ArticlesPage.module.scss';
 import {
     getArticlesPageError,
