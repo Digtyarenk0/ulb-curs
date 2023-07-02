@@ -1,3 +1,4 @@
+/* eslint-disable react/no-array-index-key */
 import { useTranslation } from 'react-i18next';
 import { memo } from 'react';
 import { ArticleListItemSkeleton } from 'entities/Article/ui/ArticleListItem/ArticleListItemSkeleton';
@@ -16,7 +17,6 @@ interface ArticleListProps {
 const getSkeletons = (view: ArticleView) => new Array(view === ArticleView.SMALL ? 9 : 3)
     .fill(0)
     .map((item, index) => (
-        // eslint-disable-next-line react/no-array-index-key
         <ArticleListItemSkeleton className={cls.card} key={index} view={view} />
     ));
 
@@ -28,14 +28,6 @@ export const ArticleList = memo((props: ArticleListProps) => {
         isLoading,
     } = props;
     const { t } = useTranslation();
-
-    if (isLoading) {
-        return (
-            <div className={classNames(cls.ArticleList, {}, [className, cls[view]])}>
-                {getSkeletons(view)}
-            </div>
-        );
-    }
 
     const renderArticle = (article: Article) => (
         <ArticleListItem
@@ -51,6 +43,7 @@ export const ArticleList = memo((props: ArticleListProps) => {
             {articles.length > 0
                 ? articles.map(renderArticle)
                 : null}
+            {isLoading && getSkeletons(view)}
         </div>
     );
 });
