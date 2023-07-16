@@ -1,6 +1,6 @@
 import { StateSchema } from 'app/providers/StoreProvider';
 import { ValidateProfileError } from 'entities/Profile';
-import { getProfileValidateError } from './getProfileValidateErrors';
+import { getProfileValidateErrors } from './getProfileValidateErrors';
 
 describe('getProfilevalidateError.test', () => {
   test('should work with filled state', () => {
@@ -9,13 +9,13 @@ describe('getProfilevalidateError.test', () => {
         validateError: [ValidateProfileError.SERVER_ERROR, ValidateProfileError.INCORRECT_AGE],
       },
     };
-    expect(getProfileValidateError(state as StateSchema)).toEqual([
+    expect(getProfileValidateErrors(state as StateSchema)).toEqual([
       ValidateProfileError.SERVER_ERROR,
       ValidateProfileError.INCORRECT_AGE,
     ]);
   });
   test('should work with empty state', () => {
     const state: DeepPartial<StateSchema> = {};
-    expect(getProfileValidateError(state as StateSchema)).toEqual(undefined);
+    expect(getProfileValidateErrors(state as StateSchema)).toEqual(undefined);
   });
 });

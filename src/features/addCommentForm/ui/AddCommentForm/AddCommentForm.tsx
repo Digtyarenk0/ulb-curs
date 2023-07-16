@@ -1,3 +1,4 @@
+/* eslint-disable i18next/no-literal-string */
 import { useTranslation } from 'react-i18next';
 import { memo, useCallback } from 'react';
 import { Input } from 'shared/ui/Input/Input';
@@ -5,6 +6,7 @@ import { Button, ButtonTheme } from 'shared/ui/Button/Button';
 import { useSelector } from 'react-redux';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { DynamicModuleLoader, ReducersList } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
+import { HStack } from 'shared/ui/Stack';
 import classNames from 'classnames';
 import { addCommentFormActions, addCommentFormReducer } from '../../model/slices/addCommentFormSlice';
 import { getAddCommentFormError, getAddCommentFormText } from '../../model/selectors/addCommentFormSelectors';
@@ -37,7 +39,7 @@ const AddCommentForm = memo((props: AddCommentFormProps) => {
 
     return (
         <DynamicModuleLoader reducers={reducers}>
-            <div className={classNames(cls.AddCommentForm, {}, [className])}>
+            <HStack justify="between" max className={classNames(cls.AddCommentForm, {}, [className])}>
                 <Input
                     className={cls.input}
                     placeholder={t('Введите текст комментария')}
@@ -50,7 +52,7 @@ const AddCommentForm = memo((props: AddCommentFormProps) => {
                 >
                     {t('Отправить')}
                 </Button>
-            </div>
+            </HStack>
         </DynamicModuleLoader>
     );
 });
