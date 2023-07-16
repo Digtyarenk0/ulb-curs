@@ -12,7 +12,7 @@ module.exports = {
         ecmaVersion: 'latest',
         sourceType: 'module',
     },
-    plugins: ['react', '@typescript-eslint', 'prettier', 'i18next', 'react-hooks', ],
+    plugins: ['react', '@typescript-eslint', 'prettier', 'i18next', 'react-hooks', 'ulbi-tv-plugin',],
     extends: ['plugin:react/recommended', 'airbnb', 'prettier', 'plugin:i18next/recommended'],
     rules: {
         'react/jsx-indent': [2, 4],
@@ -47,6 +47,7 @@ module.exports = {
         'no-param-reassign': 'off',
         'no-undef': 'off',
         'react/button-has-type': 'off',
+        'ulbi-tv-plugin/path-checker': 'error',
     },
     globals: {
         __IS_DEV__: true,
