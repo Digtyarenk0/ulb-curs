@@ -10,9 +10,10 @@ import { RoutePath } from 'shared/config/routeConfig/routeConfig';
 import { AppLink } from 'shared/ui/AppLink/AppLink';
 import classNames from 'classnames';
 import { ARTICLES_LIST_ITEM_LOCALSTORAGE_IDX } from 'shared/const/localstorage';
+import { ArticleBlockType, ArticleView } from 'entities/Article';
 import cls from './ArticleListItem.module.scss';
 import {
-    Article, ArticleBlockType, ArticleTextBlock, ArticleView,
+    Article, ArticleTextBlock,
 } from '../../model/types/article';
 import { ArticleTextBlockComponent } from '../ArticleTextBlockComponent/ArticleTextBlockComponent';
 
