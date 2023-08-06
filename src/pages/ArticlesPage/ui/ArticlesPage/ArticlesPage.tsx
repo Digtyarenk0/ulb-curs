@@ -7,7 +7,6 @@ import { Page } from 'widgets/Page/Page';
 import { useSearchParams } from 'react-router-dom';
 import classNames from 'classnames';
 import { ArticleInfiniteList } from '../ArticleInfiniteList/ArticleInfiniteList';
-import { ArticlesPageFilters } from '../ArticlesPageFilters/ArticlesPageFilters';
 import { fetchNextArticlesPage } from '../../model/services/fetchNextArticlesPage/fetchNextArticlesPage';
 import { initArticlesPage } from '../../model/services/initArticlesPage/initArticlesPage';
 import { articlesPageReducer } from '../../model/slices/articlesPageSlice';
@@ -41,7 +40,6 @@ const ArticlesPage = (props: ArticlesPageProps) => {
                 onScrollEnd={onLoadNextPart}
                 className={classNames(cls.ArticlesPage, {}, [className])}
             >
-                <ArticlesPageFilters />
                 <ArticleInfiniteList className={cls.list} />
             </Page>
         </DynamicModuleLoader>
