@@ -1,4 +1,3 @@
-/* eslint-disable i18next/no-literal-string */
 import { useTranslation } from 'react-i18next';
 import { Text, TextAlign, TextTheme } from 'shared/ui/Text/Text';
 import { Input } from 'shared/ui/Input/Input';
