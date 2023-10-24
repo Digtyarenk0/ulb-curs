@@ -1,21 +1,21 @@
 import { useTranslation } from 'react-i18next';
 import React, { memo, useCallback, useState } from 'react';
-import { Button, ButtonTheme } from 'shared/ui/Button/Button';
-import { LoginModal } from 'features/AuthByUsername';
+import { Button, ButtonTheme } from '@/shared/ui/Button/Button';
+import { LoginModal } from '@/features/AuthByUsername';
 import { useDispatch, useSelector } from 'react-redux';
 import {
     getUserAuthData, userActions,
-} from 'entities/User';
-import { Text, TextTheme } from 'shared/ui/Text/Text';
-import { AppLink, AppLinkTheme } from 'shared/ui/AppLink/AppLink';
-import { RoutePath } from 'shared/config/routeConfig/routeConfig';
-import { Avatar } from 'shared/ui/Avatar/Avatar';
-import { isUserAdmin, isUserManager } from 'entities/User/model/selectors/roleSelectors';
+} from '@/entities/User';
+import { Text, TextTheme } from '@/shared/ui/Text/Text';
+import { AppLink, AppLinkTheme } from '@/shared/ui/AppLink/AppLink';
+import { RoutePath } from '@/shared/config/routeConfig/routeConfig';
+import { Avatar } from '@/shared/ui/Avatar/Avatar';
+import { isUserAdmin, isUserManager } from '@/entities/User/model/selectors/roleSelectors';
 import classNames from 'classnames';
-import { Dropdown } from 'shared/ui/Dropdown/Dropdown';
-import { HStack } from 'shared/ui/Stack';
-import { AvatarDropdown } from 'features/avatarDropdown';
-import { NotificationButton } from 'features/notificationButton';
+import { Dropdown } from '@/shared/ui/Dropdown/Dropdown';
+import { HStack } from '@/shared/ui/Stack';
+import { AvatarDropdown } from '@/features/avatarDropdown';
+import { NotificationButton } from '@/features/notificationButton';
 import cls from './Navbar.module.scss';
 
 interface NavbarProps {

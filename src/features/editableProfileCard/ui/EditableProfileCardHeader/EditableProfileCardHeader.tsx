@@ -2,11 +2,11 @@ import { useTranslation } from 'react-i18next';
 import { memo, useCallback } from 'react';
 import { useSelector } from 'react-redux';
 
-import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
-import { HStack } from 'shared/ui/Stack';
-import { Text } from 'shared/ui/Text/Text';
-import { Button, ButtonTheme } from 'shared/ui/Button/Button';
-import { getUserAuthData } from 'entities/User';
+import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';
+import { HStack } from '@/shared/ui/Stack';
+import { Text } from '@/shared/ui/Text/Text';
+import { Button, ButtonTheme } from '@/shared/ui/Button/Button';
+import { getUserAuthData } from '@/entities/User';
 import classNames from 'classnames';
 import { profileActions } from '../../model/slice/profileSlice';
 import { getProfileReadonly } from '../../model/selectors/getProfileReadonly/getProfileReadonly';
