@@ -13,6 +13,9 @@ import { Avatar } from 'shared/ui/Avatar/Avatar';
 import { isUserAdmin, isUserManager } from 'entities/User/model/selectors/roleSelectors';
 import classNames from 'classnames';
 import { Dropdown } from 'shared/ui/Dropdown/Dropdown';
+import { HStack } from 'shared/ui/Stack';
+import { AvatarDropdown } from 'features/avatarDropdown';
+import { NotificationButton } from 'features/notificationButton';
 import cls from './Navbar.module.scss';
 
 interface NavbarProps {
@@ -56,25 +59,10 @@ export const Navbar = memo(({ className }: NavbarProps) => {
                 >
                     {t('Создать статью')}
                 </AppLink>
-                <Dropdown
-                    direction="bottom left"
-                    className={cls.dropdown}
-                    items={[
-                        ...(isAdminPanelAvailable ? [{
-                            content: t('Админка'),
-                            href: RoutePath.admin_panel,
-                        }] : []),
-                        {
-                            content: t('Профиль'),
-                            href: RoutePath.profile + authData.id,
-                        },
-                        {
-                            content: t('Выйти'),
-                            onClick: onLogout,
-                        },
-                    ]}
-                    trigger={<Avatar size={30} src={authData.avatar} />}
-                />
+                <HStack gap="16" className={cls.actions}>
+                    <NotificationButton />
+                    <AvatarDropdown />
+                </HStack>
             </header>
         );
     }
