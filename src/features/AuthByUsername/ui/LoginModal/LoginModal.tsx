@@ -1,5 +1,5 @@
-import { Modal } from '@/shared/ui/Modal/Modal';
 import classNames from 'classnames';
+import { Modal } from '@/shared/ui/Modal/Modal';
 import { LoginForm } from '../LoginForm/LoginForm';
 
 interface LoginModalProps {

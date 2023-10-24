@@ -1,8 +1,9 @@
 import { useTranslation } from 'react-i18next';
 import React, { memo, useCallback, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import classNames from 'classnames';
 import { Button, ButtonTheme } from '@/shared/ui/Button/Button';
 import { LoginModal } from '@/features/AuthByUsername';
-import { useDispatch, useSelector } from 'react-redux';
 import {
     getUserAuthData, userActions,
 } from '@/entities/User';
@@ -11,7 +12,6 @@ import { AppLink, AppLinkTheme } from '@/shared/ui/AppLink/AppLink';
 import { RoutePath } from '@/shared/config/routeConfig/routeConfig';
 import { Avatar } from '@/shared/ui/Avatar/Avatar';
 import { isUserAdmin, isUserManager } from '@/entities/User/model/selectors/roleSelectors';
-import classNames from 'classnames';
 import { Dropdown } from '@/shared/ui/Dropdown/Dropdown';
 import { HStack } from '@/shared/ui/Stack';
 import { AvatarDropdown } from '@/features/avatarDropdown';

@@ -1,8 +1,8 @@
 import { useSelector } from 'react-redux';
-import { UserRole, getUserAuthData } from '@/entities/User';
 import { Navigate, useLocation } from 'react-router-dom';
-import { RoutePath } from '@/shared/config/routeConfig/routeConfig';
 import { useMemo } from 'react';
+import { UserRole, getUserAuthData } from '@/entities/User';
+import { RoutePath } from '@/shared/config/routeConfig/routeConfig';
 import { getUserRoles } from '@/entities/User/model/selectors/roleSelectors';
 
 interface RequireAuthProps {

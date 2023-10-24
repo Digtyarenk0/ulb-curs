@@ -1,10 +1,10 @@
 /* eslint-disable react/prop-types */
 import { useTranslation } from 'react-i18next';
 import { FC, HTMLAttributeAnchorTarget, memo, useEffect, useRef, useState } from 'react';
-import { ArticleListItemSkeleton } from '@/entities/Article/ui/ArticleListItem/ArticleListItemSkeleton';
 import { Virtuoso, VirtuosoGrid, VirtuosoGridHandle } from 'react-virtuoso';
-import { Text, TextSize } from '@/shared/ui/Text/Text';
 import classNames from 'classnames';
+import { ArticleListItemSkeleton } from '@/entities/Article/ui/ArticleListItem/ArticleListItemSkeleton';
+import { Text, TextSize } from '@/shared/ui/Text/Text';
 import { ARTICLES_LIST_ITEM_LOCALSTORAGE_IDX } from '@/shared/const/localstorage';
 import { ArticlesPageFilters } from '@/pages/ArticlesPage/ui/ArticlesPageFilters/ArticlesPageFilters';
 import { ArticleView } from '@/entities/Article';

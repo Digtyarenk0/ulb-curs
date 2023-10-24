@@ -1,10 +1,10 @@
+import { useParams } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
+import classNames from 'classnames';
 import { Page } from '@/widgets/Page/Page';
 import { VStack } from '@/shared/ui/Stack/VStack/VStack';
 import { Text } from '@/shared/ui/Text/Text';
 import { EditableProfileCard } from '@/features/editableProfileCard';
-import { useParams } from 'react-router-dom';
-import { useTranslation } from 'react-i18next';
-import classNames from 'classnames';
 
 interface ProfilePageProps {
     className?: string;

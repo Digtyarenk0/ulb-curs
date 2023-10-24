@@ -1,10 +1,10 @@
-import { CounterSchema } from '@/entities/Counter';
-import { UserSchema } from '@/entities/User';
-import { LoginSchema } from '@/features/AuthByUsername';
 import { AnyAction, EnhancedStore, Reducer, ReducersMapObject } from '@reduxjs/toolkit';
 import { CombinedState } from 'redux';
 import { AxiosInstance } from 'axios';
 import { NavigateOptions } from 'react-router';
+import { LoginSchema } from '@/features/AuthByUsername';
+import { UserSchema } from '@/entities/User';
+import { CounterSchema } from '@/entities/Counter';
 import { ArticleDetailsSchema } from '@/entities/Article';
 import {
   ArticleDetailsCommentsSchema,
