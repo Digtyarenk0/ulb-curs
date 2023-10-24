@@ -6,7 +6,7 @@ module.exports = {
     },
     parser: '@typescript-eslint/parser',
     parserOptions: {
-        ecmaFeatures: { 
+        ecmaFeatures: {
             jsx: true,
         },
         ecmaVersion: 'latest',
@@ -36,7 +36,8 @@ module.exports = {
             'error',
             {
                 markupOnly: true,
-                ignoreAttribute: ['role', 'data-testid', 'to', 'target', 'justify', 'align', 'direction', 'gap'],
+                // eslint-disable-next-line max-len
+                ignoreAttribute: ['role', 'as', 'border', 'data-testid', 'to', 'target', 'justify', 'align', 'direction', 'gap'],
             },
         ],
         'max-len': ['error', { ignoreComments: true, code: 120 }],
