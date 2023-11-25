@@ -18,6 +18,7 @@ interface ArticleListProps {
 
 const getSkeletons = (view: ArticleView) => new Array(view === ArticleView.SMALL ? 9 : 3)
     .fill(0)
+/* eslint-disable react/no-array-index-key */
     .map((item, index) => (
         <ArticleListItemSkeleton className={cls.card} key={index} view={view} />
     ));
