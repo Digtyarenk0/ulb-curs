@@ -48,7 +48,7 @@ module.exports = {
         'no-param-reassign': 'off',
         'no-undef': 'off',
         'react/button-has-type': 'off',
-        'ulbi-tv-plugin/path-checker': 'error',
+        'ulbi-tv-plugin/path-checker': ['error', { alias: '@' }],
     },
     globals: {
         __IS_DEV__: true,

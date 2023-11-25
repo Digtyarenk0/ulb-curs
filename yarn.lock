@@ -7439,10 +7439,10 @@ eslint-plugin-react@^7.29.2, eslint-plugin-react@^7.32.2:
     semver "^6.3.1"
     string.prototype.matchall "^4.0.8"
 
-eslint-plugin-ulbi-tv-plugin@^0.0.1:
-  version "0.0.1"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-ulbi-tv-plugin/-/eslint-plugin-ulbi-tv-plugin-0.0.1.tgz#bf3704f9c864424f496c1730272d4c1ee64cee3c"
-  integrity sha512-awxUVm2mxJQ9h3DVaZQuikJEkNG4KchgS80frAQ/AeUYGFYyJQqPGWnRqyETfGypbWCQiaRb/nFWuct83Q3BEw==
+eslint-plugin-ulbi-tv-plugin@^0.0.2:
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-ulbi-tv-plugin/-/eslint-plugin-ulbi-tv-plugin-0.0.2.tgz#d20c8af5001ef00cc53cc6e9c0361f7ce555572c"
+  integrity sha512-l5oNjLaHc9VVmEZdgbEAUVVHrbOH2At5wzCrMrx/21HNtFsBkg06prHC6uVj926cQQnOH1eHAFApq/b3mR2/AA==
   dependencies:
     requireindex "^1.2.0"
 
