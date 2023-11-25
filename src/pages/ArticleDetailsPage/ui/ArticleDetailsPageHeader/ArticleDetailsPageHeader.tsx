@@ -3,7 +3,7 @@ import { memo, useCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import classNames from 'classnames';
-import { Button, ButtonTheme } from '@/shared/ui/Button/Button';
+import { Button, ButtonTheme } from '@/shared/ui/Button';
 import { getUserAuthData } from '@/entities/User';
 import cls from './ArticleDetailsPageHeader.module.scss';
 import { getArticleDetailsData } from '@/entities/Article';
