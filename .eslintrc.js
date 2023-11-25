@@ -12,7 +12,7 @@ module.exports = {
         ecmaVersion: 'latest',
         sourceType: 'module',
     },
-    plugins: ['react', '@typescript-eslint', 'prettier', 'i18next', 'react-hooks', 'ulbi-tv-plugin',],
+    plugins: ['react', '@typescript-eslint', 'prettier', 'i18next', 'react-hooks', 'ulbi-tv-plugin', "unused-imports"],
     extends: ['plugin:react/recommended', 'airbnb', 'prettier', 'plugin:i18next/recommended'],
     rules: {
         'react/jsx-indent': [2, 4],
@@ -22,6 +22,7 @@ module.exports = {
             { extensions: ['.js', '.jsx', '.tsx'] },
         ],
         'import/no-unresolved': 'off',
+        "unused-imports/no-unused-imports": "error",
         'import/prefer-default-export': 'off',
         'no-unused-vars': 'off',
         'react/require-default-props': 'off',

@@ -3,7 +3,6 @@ import { useSelector } from 'react-redux';
 import classNames from 'classnames';
 import { LangSwitcher } from '@/widgets/LangSwitcher';
 import { Button, ButtonSize, ButtonTheme } from '@/shared/ui/Button';
-import { getUserAuthData } from '@/entities/User';
 import { VStack } from '@/shared/ui/Stack';
 import cls from './Sidebar.module.scss';
 import { SidebarItem } from '../SidebarItem/SidebarItem';
