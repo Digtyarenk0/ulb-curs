@@ -10,13 +10,15 @@ import { articleDetailsReducer } from '@/entities/Article/model/slice/articleDet
 import { addCommentFormReducer } from '@/features/addCommentForm/model/slices/addCommentFormSlice';
 // eslint-disable-next-line ulbi-tv-plugin/public-api-imports
 import { profileReducer } from '@/features/editableProfileCard/model/slice/profileSlice';
+// eslint-disable-next-line ulbi-tv-plugin/public-api-imports
+import { articleDetailsPageReducer } from '@/pages/ArticleDetailsPage/model/slices';
 
 const defaultAsyncReducers: ReducersList = {
     loginForm: loginReducer,
     profile: profileReducer,
     articleDetails: articleDetailsReducer,
     addCommentForm: addCommentFormReducer,
-    articleDetailsPage: articleDetailsReducer,
+    articleDetailsPage: articleDetailsPageReducer,
 };
 
 export const StoreDecorator = (
