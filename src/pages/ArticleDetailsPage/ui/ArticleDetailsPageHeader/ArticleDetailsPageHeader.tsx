@@ -7,7 +7,7 @@ import { Button, ButtonTheme } from '@/shared/ui/Button';
 import cls from './ArticleDetailsPageHeader.module.scss';
 import { getArticleDetailsData } from '@/entities/Article';
 import { getCanEditArticle } from '../../model/selectors/article';
-import { getRouteArticleDetails, getRouteArticleEdit, getRouteArticles } from '@/shared/const/router';
+import { getRouteArticleEdit, getRouteArticles } from '@/shared/const/router';
 
 interface ArticleDetailsPageHeaderProps {
     className?: string;
