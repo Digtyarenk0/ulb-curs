@@ -7,7 +7,7 @@ import { VStack } from '@/shared/ui/Stack';
 import {
     useArticleRecommendationsList,
 } from '../../api/aritcleRecommendationsApi';
- 
+
 interface ArticleRecommendationsListProps {
     className?: string;
 }
@@ -21,7 +21,7 @@ export const ArticleRecommendationsList = memo((props: ArticleRecommendationsLis
         return null;
     }
 
-    return ( 
+    return (
         <VStack gap="8" className={classNames('', {}, [className])}>
             <Text
                 size={TextSize.L}
@@ -30,7 +30,7 @@ export const ArticleRecommendationsList = memo((props: ArticleRecommendationsLis
             <ArticleList
                 articles={articles}
                 target="_blank"
-                onLoadNextPart={() => {}} />
+            />
         </VStack>
     );
 });

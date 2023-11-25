@@ -1,5 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import { HTMLAttributeAnchorTarget, memo, useCallback } from 'react';
+import { useNavigate } from 'react-router-dom';
 import classNames from 'classnames';
 import { Text } from '@/shared/ui/Text/Text';
 import { Icon } from '@/shared/ui/Icon/Icon';
@@ -7,31 +8,27 @@ import EyeIcon from '@/shared/assets/icons/eye-20-20.svg';
 import { Card } from '@/shared/ui/Card/Card';
 import { Avatar } from '@/shared/ui/Avatar/Avatar';
 import { Button, ButtonTheme } from '@/shared/ui/Button/Button';
-import { RoutePath } from '@/shared/const/router';
 import { AppLink } from '@/shared/ui/AppLink/AppLink';
-import { ARTICLES_LIST_ITEM_LOCALSTORAGE_IDX } from '@/shared/const/localstorage';
-import { ArticleBlockType, ArticleView } from '@/entities/Article';
+import { ArticleBlockType, ArticleView } from '../../model/consts/articleConsts';
 import cls from './ArticleListItem.module.scss';
 import {
     Article, ArticleTextBlock,
 } from '../../model/types/article';
 import { ArticleTextBlockComponent } from '../ArticleTextBlockComponent/ArticleTextBlockComponent';
+import { RoutePath } from '@/shared/const/router';
 
 interface ArticleListItemProps {
     className?: string;
     article: Article;
     view: ArticleView;
-    index: number;
     target?: HTMLAttributeAnchorTarget;
 }
 
 export const ArticleListItem = memo((props: ArticleListItemProps) => {
     const {
-        className, article, view, target, index
+        className, article, view, target,
     } = props;
     const { t } = useTranslation();
-    console.log('ArticleListItem');
-    
 
     const types = <Text text={article.type.join(', ')} className={cls.types} />;
     const views = (
@@ -40,10 +37,6 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
             <Icon Svg={EyeIcon} />
         </>
     );
-
-    const handleBtnClick = () => {
-        sessionStorage.setItem(ARTICLES_LIST_ITEM_LOCALSTORAGE_IDX, JSON.stringify(index))
-    }
 
     if (view === ArticleView.BIG) {
         const textBlock = article.blocks.find(
@@ -66,7 +59,6 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
                     )}
                     <div className={cls.footer}>
                         <AppLink
-                            onClick={handleBtnClick}
                             target={target}
                             to={RoutePath.article_details + article.id}
                         >
@@ -83,7 +75,6 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
 
     return (
         <AppLink
-            onClick={handleBtnClick}
             target={target}
             to={RoutePath.article_details + article.id}
             className={classNames(cls.ArticleListItem, {}, [className, cls[view]])}
